@@ -1,5 +1,6 @@
 FROM php:7.1-fpm-alpine3.7
 
+# Container tools
 RUN apk add --no-cache \
   openssh-client \
   vim \
@@ -8,6 +9,7 @@ RUN apk add --no-cache \
   curl \
   $PHPIZE_DEPS
 
+#PHP Extensions
 RUN pecl install xdebug \
   ; docker-php-ext-install \
   pdo_mysql \
