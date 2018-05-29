@@ -6,15 +6,15 @@ RUN apk add --no-cache \
   git \
   unzip \
   curl \
-  $PHPIZE_DEPS \
-  && pecl install xdebug
+  $PHPIZE_DEPS
 
-RUN docker-php-ext-install \
+RUN pecl install xdebug \
+  ; docker-php-ext-install \
   pdo_mysql \
   opcache \
-  && docker-php-ext-enable \
-  xdebug
+  ; docker-php-ext-enable xdebug
 
 COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
+RUN composer global require hirak/prestissimo
 
 WORKDIR /var/www
