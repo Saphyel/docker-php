@@ -16,7 +16,7 @@ RUN pecl install xdebug \
   opcache \
   bcmath \
   ; docker-php-ext-enable xdebug
-//xml, json, readline, curl, gd, mbstring, zip cli?
+
 COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
 RUN composer global require hirak/prestissimo
 
