@@ -14,6 +14,7 @@ RUN pecl install xdebug \
   ; docker-php-ext-install \
   pdo_mysql \
   opcache \
+  bcmath \
   ; docker-php-ext-enable xdebug
 
 COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
