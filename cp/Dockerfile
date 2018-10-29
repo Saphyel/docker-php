@@ -7,6 +7,7 @@ RUN apk add --no-cache \
   git \
   unzip \
   curl \
+  zlib-dev \
   $PHPIZE_DEPS
 
 #PHP Extensions
@@ -15,6 +16,7 @@ RUN pecl install xdebug \
   pdo_mysql \
   opcache \
   bcmath \
+  zip \
   ; docker-php-ext-enable xdebug
 
 COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
