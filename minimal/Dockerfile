@@ -17,7 +17,7 @@ RUN pecl install xdebug \
   bcmath \
   ; docker-php-ext-enable xdebug
 
-COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.8 /usr/bin/composer /usr/bin/composer
 RUN composer global require hirak/prestissimo
 
 WORKDIR /var/www
