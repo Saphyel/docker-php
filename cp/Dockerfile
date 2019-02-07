@@ -8,6 +8,7 @@ RUN apk add --no-cache \
   unzip \
   curl \
   zlib-dev \
+  libpng-dev \
   $PHPIZE_DEPS
 
 #PHP Extensions
@@ -17,6 +18,7 @@ RUN pecl install xdebug \
   opcache \
   bcmath \
   zip \
+  gd \
   ; docker-php-ext-enable xdebug
 
 COPY --from=composer:1.6 /usr/bin/composer /usr/bin/composer
