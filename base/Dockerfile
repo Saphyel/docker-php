@@ -9,6 +9,7 @@ RUN apk add --no-cache \
   git \
   unzip \
   curl \
+  ${PHPIZE_DEPS} \
   ; pecl install apcu \
   ; docker-php-ext-install \
   opcache \
