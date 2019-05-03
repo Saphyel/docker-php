@@ -1,23 +1,6 @@
-FROM php:7.2-fpm-alpine
-
-COPY --from=composer:1.8 /usr/bin/composer /usr/bin/composer
+FROM saphyel/php:latest
 
 # Container tools
 RUN apk add --no-cache \
-  openssh-client \
-  vim \
-  git \
-  unzip \
-  curl \
   chromium \
   chromium-chromedriver \
-  zlib-dev \
-  $PHPIZE_DEPS \
-  ; pecl install xdebug \
-  ; docker-php-ext-install \
-  pdo_mysql \
-  opcache \
-  bcmath \
-  zip \
-  ; docker-php-ext-enable xdebug \
-  ; composer global require hirak/prestissimo

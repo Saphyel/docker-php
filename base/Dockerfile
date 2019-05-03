@@ -9,10 +9,9 @@ RUN apk add --no-cache \
   git \
   unzip \
   curl \
-  $PHPIZE_DEPS \
-  ; pecl install apcu xdebug \
+  ; pecl install apcu \
   ; docker-php-ext-install \
   opcache \
   bcmath \
-  ; docker-php-ext-enable apcu xdebug \
+  ; docker-php-ext-enable apcu \
   ; composer global require hirak/prestissimo
