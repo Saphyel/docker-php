@@ -15,4 +15,4 @@ RUN apk add --no-cache \
   opcache \
   bcmath \
   ; docker-php-ext-enable apcu \
-  ; composer global require hirak/prestissimo
+  ; composer global require hirak/prestissimo --prefer-dist --no-progress --no-suggest --optimize-autoloader
