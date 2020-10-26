@@ -1,6 +1,6 @@
 FROM php:7.4-fpm-alpine
 
-COPY --from=saphyel/php-composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer/composer:2 /usr/bin/composer /usr/bin/composer
 
 # Container tools
 RUN apk add --no-cache \
