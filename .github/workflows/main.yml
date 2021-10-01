@@ -25,4 +25,4 @@ jobs:
           tags: |
             saphyel/php:7
             saphyel/php:latest
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/master' }}
