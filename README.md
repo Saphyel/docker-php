@@ -1,4 +1,4 @@
-Docker PHP-FPM 7.1
+Docker PHP-FPM 8.0
 ==================
 This container includes is ready to work with Symfony.
 
@@ -12,9 +12,9 @@ Configuration
 * unzip
 
 ### PHP
-* pdo_mysql
 * opcache
-* xdebug
+* bcmath
+* apcu
 * Composer
 
 FAQ
