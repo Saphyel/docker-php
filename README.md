@@ -1,4 +1,4 @@
-Docker PHP-FPM 8.0
+Docker PHP-FPM
 ==================
 This container includes is ready to work with Symfony.
 
