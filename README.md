@@ -1,9 +1,9 @@
-Docker PHP-FPM
-==================
+# Docker PHP-FPM
+
 This container includes is ready to work with Symfony.
 
-Configuration
--------------
+## Configuration
+
 ### Alpine
 * vim
 * openssh
@@ -17,8 +17,8 @@ Configuration
 * apcu
 * Composer
 
-FAQ
----
+## FAQ
+
 ### Xdebug set up
 You need to add a php.ini with this configuration:
 
